@@ -25,6 +25,12 @@
                 </li>
                 @endif
 
+                @else
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Subir Anuncio</a>
+                </li>
+
                 @endguest
 
             </ul>

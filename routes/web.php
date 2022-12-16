@@ -17,13 +17,18 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::post('/', function () {
-    return view('home');
-})->name('loginHome');
 
-Route::get('/login', function () {
+/* Route::post('/', function () {
+    return view('home');
+})->name('loginHome'); */
+
+/* Route::get('/login', function () {
     return view('auth/login');
 })->name('login');
+
+Route::get('/register', function () {
+    return view('auth/register');
+})->name('register'); */
 
 Route::get('/categories', function () {
     return view('categories');
