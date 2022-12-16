@@ -11,7 +11,7 @@
     {{$style ?? ''}}
 
 </head>
-<body>
+<body class="bg-warning">
     <x-nav />
         {{$slot}}
     <x-footer />
