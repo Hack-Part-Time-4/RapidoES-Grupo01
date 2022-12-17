@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title ?? 'Rapido.es'}}</title>
 
+    @livewireStyles
     @vite(['resources/css/app.css'])
 
     {{$style ?? ''}}
@@ -15,6 +16,7 @@
     <x-nav />
         {{$slot}}
     <x-footer />
+    @livewireScripts
     @vite(['resources/js/app.js'])
     {{$script ?? ''}}
 
