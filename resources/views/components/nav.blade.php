@@ -13,10 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('categories')}}">Categorías</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Añadir anuncio</a>
-                </li>
+                
                 @guest
+                
                 @if (Route::has('login'))
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('login')}}">Entrar</a>
@@ -30,6 +29,9 @@
 
                 @else
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ads.create') }}">Añadir anuncio</a>
+                </li>
 
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
