@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdController;
+use App\Models\Ad;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/categories', function () {
+    return view('categories');
+})->name('categories');
+
+Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
 /* Route::post('/', function () {
     return view('home');
@@ -30,6 +37,3 @@ Route::get('/register', function () {
     return view('auth/register');
 })->name('register'); */
 
-Route::get('/categories', function () {
-    return view('categories');
-})->name('categories');

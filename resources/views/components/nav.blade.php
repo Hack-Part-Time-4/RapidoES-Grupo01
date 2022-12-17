@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('categories')}}">Categorías</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Añadir anuncio</a>
+                </li>
                 @guest
                 @if (Route::has('login'))
                 <li class="nav-item">
@@ -27,9 +30,11 @@
 
                 @else
 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Subir Anuncio</a>
-                </li>
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="bg-warning"> Logout </button>
+                </form>
 
                 @endguest
 
