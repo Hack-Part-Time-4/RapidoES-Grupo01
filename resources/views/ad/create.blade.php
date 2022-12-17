@@ -10,7 +10,7 @@
                         <h4>Nuevo anuncio</h4>
                     </div>
                     <div class="card-body">
-                      This is some text within a card body.
+                      <livewire:create-ad />
                     </div>
                   </div>
             </div>
