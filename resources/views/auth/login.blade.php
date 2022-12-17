@@ -1,6 +1,6 @@
 <x-layout>
 
-    <form action="{{route ('home')}}" method="post" enctype="multipart/form-data">
+    <form action="/home" method="POST" role="form" class="form-control" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
