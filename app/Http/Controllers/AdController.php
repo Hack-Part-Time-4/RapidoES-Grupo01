@@ -17,4 +17,7 @@ class AdController extends Controller
 
         return view('ad.create');
     }
+
+    
+
 }

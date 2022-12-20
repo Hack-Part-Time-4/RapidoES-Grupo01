@@ -28,7 +28,7 @@
                                                 <input type="text" name="name" id="name" class="form-control"
                                                     placeholder="Tu nombre" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -37,7 +37,7 @@
                                                 <input type="email" name="email" id="email" class="form-control"
                                                     placeholder="Tu email" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -46,7 +46,7 @@
                                                 <input type="password" name="password" id="password"
                                                     class="form-control" placeholder="Tu contraseña" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -55,7 +55,7 @@
                                                 <input type="password" name="password_confirmation" id="password"
                                                     class="form-control" placeholder="Tu contraseña, una vez más" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         {{-- <div class="form-check d-flex justify-content-center mb-5">

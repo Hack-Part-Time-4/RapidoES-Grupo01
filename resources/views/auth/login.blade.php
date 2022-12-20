@@ -29,7 +29,7 @@
                                                 <input type="email" name="email" id="email" class="form-control"
                                                     placeholder="Tu email" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -38,7 +38,7 @@
                                                 <input type="password" name="password" id="password"
                                                     class="form-control" placeholder="Tu contraseña" />
                                             </div>
-                                            <div class="validate"></div>
+                                            {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
