@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Ad extends Model
 {
     
-    protected $fillable = ['title', 'body','price'];
+    protected $fillable = ['title','price','body',];
     use HasFactory;
 }
