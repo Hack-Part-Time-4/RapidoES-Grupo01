@@ -14,15 +14,15 @@ class CreateAd extends Component
     public $price;
 
     protected $rules = [
-        'title' => 'Requiere |min:4',
-        'body' => 'Requiere min:8',
-        'price' => 'Requiere numeric',
+        'title' => 'required|min:4',
+        'body' => 'required|min:4',
+        'price' => 'required|numeric',
     ];
 
     protected $messages = [
-        'required'=>'Campo :el titulo es obligatorio, por favor rellenalo',
-        'min'=>'Campo :la cantidad tiene que ser mayor que :min',
-        'numeric'=>'Campo :el precio tiene que ser un numero'
+        'required'=>'Campo :attribute es obligatorio, por favor rellenalo',
+        'min'=>'Campo :attribute la cantidad tiene que ser mayor que :min',
+        'numeric'=>'Campo :attribute el precio tiene que ser un numero'
     ];
 
 
@@ -33,6 +33,7 @@ class CreateAd extends Component
             'body' => $this->body,
             'price' => $this->price,
         ]);
+        session()->flash('message','Anuncio creado pete');
         $this->cleanForm();
     }
 
@@ -43,10 +44,10 @@ class CreateAd extends Component
         $this->price="";
     }
 
-    /* public function updated($propertyName)
+    public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
-    } */
+    }
 
     public function render()
     {
