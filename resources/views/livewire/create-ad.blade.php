@@ -7,8 +7,8 @@
 
         </div>
         <div class="mb-3">
-            <label for="body" class="form-label">Descipción</label>
-            <textarea wire:model="body" cols="105" ></textarea>
+            <label for="body" class="form-label">Descipción</label> <br>
+            <textarea wire:model="body" cols="80" rows="8" ></textarea>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Precio</label>
