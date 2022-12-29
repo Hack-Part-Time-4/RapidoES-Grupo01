@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name='title'>Rapido - Homepage</x-slot>
 
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
             <div class="col-12">
                 <h1>Bienvenidos a nuestro portal de Anuncios</h1>
@@ -20,7 +20,7 @@
                             <h5 class="card-title pb-2">{{$ad->title}}</h5>
 
                             <div class="card-subtitle pb-2 text-primary">
-                            <a href="{{ route('category.ads',$ad->category) }}">{{$ad->category->name}}</a>
+                            <a href="{{ route('category.ads',$ad->category) }}" class="btn btn-info">{{$ad->category->name}}</a>
                             </div>
 
                             <p class="card-text">{{$ad->body}}</p>
