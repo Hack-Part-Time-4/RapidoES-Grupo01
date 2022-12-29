@@ -1,14 +1,18 @@
 <x-layout>
-    <h1 class="text-center mt-5">EN MANTENIMIENTO .....</h1>
-    <div class="text-center mt-5">
-    <img src="{{asset ('imgs/mant.png')}}" width="25%" alt="">
-    </div>
 
     @forelse ($cats as $cat)
-    <ul>
-        <li>{{ $cat->name }}</li>
-    </ul>
-    @empty
-        
-    @endforelse
+    <div class="container">
+        <div class="row justify-content-center mt-4">
+                <div class="list-group">
+                    <a href="{{ route('category.ads',$cat) }}"
+                        class="list-group-item list-group-item-primary  text-center" >
+                        {{ $cat->name }}
+                    </a>
+                </div>
+                @empty
+
+                @endforelse
+            </div>
+        </div>
+    </div>
 </x-layout>
