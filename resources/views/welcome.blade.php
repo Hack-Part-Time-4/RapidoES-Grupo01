@@ -1,6 +1,14 @@
 <x-layout>
     <x-slot name='title'>Rapido - Homepage</x-slot>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Bienvenidos a nuestro portal de Anuncios</h1>
+            </div>
+        </div>
+    </div>
+
     @forelse ($ads as $ad)
 
     <div class="container">
@@ -11,7 +19,9 @@
                         <div class="card-body">
                             <h5 class="card-title pb-2">{{$ad->title}}</h5>
 
-                            <h5 class="card-subtitle pb-2 text-primary">{{$ad->category->name}}</h5>
+                            <div class="card-subtitle pb-2 text-primary">
+                            <a href="{{ route('category.ads',$ad->category) }}">{{$ad->category->name}}</a>
+                            </div>
 
                             <p class="card-text">{{$ad->body}}</p>
 
