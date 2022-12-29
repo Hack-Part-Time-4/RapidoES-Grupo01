@@ -20,9 +20,12 @@ use Illuminate\Support\Facades\Route;
     return view('home');
 })->name('home'); */
 
-Route::get('/categories', function () {
+/* Route::get('/categories', function () {
     return view('categories');
-})->name('categories');
+})->name('categories'); */
+
+Route::get('/categories', [PublicController::class,'showCategories'])->name('categories');
+
 
 Route::get('/category/{category:name}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');
 

@@ -19,4 +19,10 @@ class PublicController extends Controller
         $ads = $category->ads()->get();
         return view('ad.by-category',compact('category','ads'));
     }
+
+    public function showCategories()
+    {
+        $cats =Category::orderBy('created_at','desc')->get();
+        return view('categories',compact('cats'));
+    }
 }
