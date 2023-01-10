@@ -36,6 +36,9 @@ Route::get('/', [PublicController::class,'index'])->name('home');
 
 Route::get('/revisor', [RevisorController::class,'index'])->name('revisor.home');
 
+Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class,'acceptAd'])->name('revisor.ad.accept');
+Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class,'rejectAd'])->name('revisor.ad.reject');
+
 /* Route::post('/', function () {
     return view('home');
 })->name('loginHome'); */
