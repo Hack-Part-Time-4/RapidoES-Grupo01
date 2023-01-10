@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
@@ -32,5 +33,6 @@ class AppServiceProvider extends ServiceProvider
         } catch (\Throwable $th) {
             dump("ALERT: recorda lanzar las migraciones luego del clone");
         }
+        Paginator::useBootstrapFive();
     }
 }

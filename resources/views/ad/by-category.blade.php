@@ -38,11 +38,16 @@
                         </div>
 
                     </div>
+                    
                 </div>
+                
             </div>
+            
 
         </div>
+       
     </div>
+
 
     @empty
 
@@ -53,6 +58,6 @@
     </div>
 
     @endforelse ($ads as $ad)
-
+    {{$ads->links()}}
 
 </x-layout>
