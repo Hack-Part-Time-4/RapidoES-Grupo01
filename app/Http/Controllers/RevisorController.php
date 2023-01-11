@@ -9,12 +9,6 @@ use function PHPSTORM_META\type;
 
 class RevisorController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('isRevisor');
-    }
-
     public function index()
     {
         $ad = Ad::where('is_accepted',null)->orderBy('created_at','desc')->first();
