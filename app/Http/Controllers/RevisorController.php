@@ -15,6 +15,8 @@ class RevisorController extends Controller
         return view('revisor.home',compact('ad'));
     }
 
+    
+
     public function acceptAd(Ad $ad)
     {
         $ad->is_accepted = true;

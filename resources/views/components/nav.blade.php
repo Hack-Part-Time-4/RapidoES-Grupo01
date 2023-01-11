@@ -13,9 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('categories')}}">Categorías</a>
                 </li>
-                
+
                 @guest
-                
+
                 @if (Route::has('login'))
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('login')}}">Entrar</a>
@@ -33,10 +33,28 @@
                     <a class="nav-link" href="{{ route('ads.create') }}">Añadir anuncio</a>
                 </li>
 
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="bg-warning"> Logout </button>
-                </form>
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                        @if (Auth::user()->is_revisor == 1)
+                            <li><a class="dropdown-item" href="{{ Route('revisor.home') }}">Revisor --
+                                <span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::adCount() }}</span></a></li>
+                        @endif
+
+                        <li><a class="dropdown-item" href="#">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="bg-warning"> Logout </button>
+                                </form>
+                            </a></li>
+
+                    </ul>
+                </div>
+
+
 
                 @endguest
 

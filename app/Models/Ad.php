@@ -21,5 +21,11 @@ class Ad extends Model
         return $this->belongsTo(User::class);
     }
 
+    static function adCount()
+    {
+        $num = Ad::where('is_accepted',null)->count();
+        return $num;
+    }
+
     use HasFactory;
 }
