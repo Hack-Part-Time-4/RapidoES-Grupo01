@@ -37,7 +37,7 @@
         </div>
     </div>
     @else
-        <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR</h1>
+        <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR !</h1>
     @endif
     
 
