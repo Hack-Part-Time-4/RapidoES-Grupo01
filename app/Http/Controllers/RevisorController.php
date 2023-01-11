@@ -28,4 +28,5 @@ class RevisorController extends Controller
         $ad->save();
         return redirect()->back()->withMessage(['type'=>'danger','text'=>'Anuncio no aceptado']);
     }
+    
 }

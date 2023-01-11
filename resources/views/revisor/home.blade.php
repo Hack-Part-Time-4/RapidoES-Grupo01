@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name='title'>Rapido - Homepage</x-slot>
-    
+    @if ($ad)
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-4 ">
@@ -36,5 +36,9 @@
 
         </div>
     </div>
+    @else
+        <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR</h1>
+    @endif
+    
 
 </x-layout>
