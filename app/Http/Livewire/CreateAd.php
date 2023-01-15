@@ -56,7 +56,7 @@ class CreateAd extends Component
             'price' => $this->price,
             'category' => $this->category;
         ]); */
-        session()->flash('message','Anuncio creado pete');
+        session()->flash('message','Anuncio creado');
         $this->cleanForm();
     }
 

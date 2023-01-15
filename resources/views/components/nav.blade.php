@@ -14,6 +14,7 @@
                     <a class="nav-link" href="{{route ('categories')}}">Categorías</a>
                 </li>
 
+                
                 @guest
 
                 @if (Route::has('login'))
