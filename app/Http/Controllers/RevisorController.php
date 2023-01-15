@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Ad;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 use function PHPSTORM_META\type;
 
@@ -29,6 +34,18 @@ class RevisorController extends Controller
         $ad->is_accepted = false;
         $ad->save();
         return redirect()->back()->withMessage(['type'=>'danger','text'=>'Anuncio no aceptado']);
+    }
+    
+    public function becomeRevisor()
+    {
+        Mail::to('admin@rapido.es')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Solicitud enviada con éxito, gracias!']);
+    }
+
+    public function makeRevisor(User $user)
+    {
+        Artisan::call('rapido:makeUserRevisor',['email'=>$user->email]);
+        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Aceptado con éxito, tenemos un nuevo Revisor !']);
     }
     
 }

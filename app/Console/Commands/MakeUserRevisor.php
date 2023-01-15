@@ -7,7 +7,8 @@ use Illuminate\Console\Command;
 
 class MakeUserRevisor extends Command
 {
-    protected $signature = 'rapido:makeUserRevisor';
+    //protected $signature = 'rapido:makeUserRevisor';
+    protected $signature = 'rapido:makeUserRevisor {email}';
 
     protected $description = 'Asigna el rol de revisor a un usuario';
 
@@ -18,8 +19,11 @@ class MakeUserRevisor extends Command
 
     public function handle()
     {
-        $email = $this->ask("Introducir el correo del usuario");
-        $user = User::where('email', $email)->first();
+       /*  $email = $this->ask("Introducir el correo del usuario");
+        $user = User::where('email', $email)->first(); */
+
+        $user = User::where('email', $this->argument('email'))->first();
+
         if(!$user){
             $this->error("Usuario no encontrado");
             return;
