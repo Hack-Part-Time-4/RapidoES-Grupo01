@@ -34,8 +34,8 @@ class CreateAd extends Component
         'numeric'=>'Campo :attribute el precio tiene que ser un numero'
     ];
 
-
-    public function store()
+// FORMA ANTIGUA
+    /* public function store()
     {
         $category = Category::find($this->category);
         $ad =  $category ->ads()->create([
@@ -45,7 +45,7 @@ class CreateAd extends Component
         ]);
 
         Auth::user()->ads()->save($ad);
-
+ */
 
         // luego de añadir la relacion : categoria - anuncio
         /* $category ->ads()->create([
@@ -61,6 +61,37 @@ class CreateAd extends Component
             'price' => $this->price,
             'category' => $this->category;
         ]); */
+    /*     session()->flash('message','Anuncio creado');
+        $this->cleanForm();
+    } */
+
+// FORMA NUEVA
+public function store()
+    {
+        // VALIDAMOS LOS DATOS
+
+        $validateData = $this->validate();
+
+        // BUSCAMOS LA CATEGORIA
+
+        $category = Category::find($this->category);
+
+        // CREAMOS EL ANUNCIO SEGUN LA CATEGORIA
+
+        $ad =  $category ->ads()->create($validateData);
+
+        // GUARDAMOS EL ANUNCIO JUNTO CON EL USUARIO
+        Auth::user()->ads()->save($ad);
+
+        // GUARDAMOS CADA IMAGEN LA DB
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $ad->images()->create([
+                    'path'=>$image->store("images/$ad->id",'public')
+                ]);
+            }
+        }
+
         session()->flash('message','Anuncio creado');
         $this->cleanForm();
     }

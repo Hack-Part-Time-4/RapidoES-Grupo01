@@ -4,13 +4,29 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-4 ">
-                
+
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        
+
                         <h5 class="card-title pb-2">Anuncio #{{$ad->id}}</h5>
                         <hr>
-
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Imágenes:</p>
+                                <div class="row">
+                                    @forelse ($ad->images as $image)
+                                    <div class="col-12 col-md-4 border border-dark">
+                                        <img src="{{ Storage::url($image->path) }}" alt="" class="img-fluid">
+                                        
+                                    </div>
+                                    @empty
+                                    <div class="col-12 col-md-4 border border-dark">
+                                        <b>No hay imágenes</b>
+                                    </div>
+                                    @endforelse
+                                </div>
+                            </div>
+                        </div>
                         <p class="card-text">Titulo: <b> {{$ad->title}} </b></p>
                         <p class="card-text">Descripción: <b> {{$ad->body}} </b></p>
                         <p class="card-text">Precio: <b> {{$ad->price}} </b></p>
@@ -37,8 +53,8 @@
         </div>
     </div>
     @else
-        <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR !</h1>
+    <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR !</h1>
     @endif
-    
+
 
 </x-layout>
