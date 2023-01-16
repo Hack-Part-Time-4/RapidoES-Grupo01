@@ -4,7 +4,7 @@
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h1>Bienvenidos a nuestro portal de Anuncios</h1>
+                <h1>{{__('messages.welcome')}}</h1>
             </div>
         </div>
         <div class="row ">

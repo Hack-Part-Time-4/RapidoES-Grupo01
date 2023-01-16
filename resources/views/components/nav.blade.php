@@ -30,7 +30,7 @@
                     <x-locale lang="es" country="es"/>
                 </li>
                 <li class="nav-item">
-                    <x-locale lang="gb" country="gb"/>
+                    <x-locale lang="en" country="gb"/>
                 </li>
                 <li class="nav-item">
                     <x-locale lang="it" country="it"/>
