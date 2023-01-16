@@ -25,4 +25,10 @@ class PublicController extends Controller
         $cats =Category::orderBy('created_at','desc')->get();
         return view('categories',compact('cats'));
     }
+
+    public function setLocale($locale)
+    {
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }

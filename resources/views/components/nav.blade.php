@@ -26,6 +26,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route ('register')}}">Registrarse</a>
                 </li>
+                <li class="nav-item">
+                    <x-locale lang="es" country="es"/>
+                </li>
+                <li class="nav-item">
+                    <x-locale lang="gb" country="gb"/>
+                </li>
+                <li class="nav-item">
+                    <x-locale lang="it" country="it"/>
+                </li>
                 @endif
 
                 @else
