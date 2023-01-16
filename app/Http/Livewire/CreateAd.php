@@ -106,6 +106,7 @@ public function store()
         $this->body="";
         $this->price="";
         $this->category="";
+        $this->images=[];
     }
 
     public function updated($propertyName)
