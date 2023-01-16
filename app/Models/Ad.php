@@ -27,5 +27,10 @@ class Ad extends Model
         return $num;
     }
 
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
     use HasFactory;
 }
