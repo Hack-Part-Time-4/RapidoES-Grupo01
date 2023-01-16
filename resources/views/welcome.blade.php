@@ -15,7 +15,8 @@
             <div class="col-12 col-md-4">
                 <div class="card mb-5" style="width: 18rem;">
                     @if ($ad->images()->count() > 0)
-                        <img src="{{$ad->images()->first()->getUrl(150,150) }}" class="card-img-top" alt="...">
+                    <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top"
+                    alt="...">
                     @else
                         <img src="https://picsum.photos/150" class="card-img-top" alt="">
                     @endif
