@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>{{$title ?? 'Rapido.es'}}</title>
-
+    
     @livewireStyles
     @vite(['resources/css/app.css'])
 
@@ -19,6 +19,7 @@
         <x-alert :type="session('message')['type']" :message="session('message')['text']" />
     @endif
     {{$slot}}
+    
     <x-footer />
     @livewireScripts
     @vite(['resources/js/app.js'])
