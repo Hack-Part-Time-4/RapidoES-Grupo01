@@ -13,11 +13,22 @@
                         <div class="row">
                             <div class="col-12">
                                 <p>Imágenes:</p>
-                                <div class="row">
+                                <div class="col">
                                     @forelse ($ad->images as $image)
                                     <div class="col-12 col-md-4 border border-dark">
-                                        <img src="{{ Storage::url($image->path) }}" alt="" class="img-fluid">
+                                        <img src="{{ $image->getUrl(400,300) }}" alt="" class="img-fluid">
                                         
+                                    </div>
+                                    <div class="col-md-8">
+                                        <b> Adult: </b><i class="bi bi-circle-fill {{$image->adult}}"></i><br> [{{$image->adult}}] <br>
+                                        <b> Spoof: </b><i class="bi bi-circle-fill {{$image->spoof}}"></i><br> [{{$image->spoof}}] <br>
+                                        <b>Medical: </b><i class="bi bi-circle-fill {{$image->medical}}"></i><br> [{{$image->medical}}] <br>
+                                        <b>Violence: </b><i class="bi bi-circle-fill {{$image->violence}}"></i><br> [{{$image->violence}}] <br>
+                                        <b>Racy: </b><i class="bi bi-circle-fill {{$image->racy}}"></i><br> [{{$image->racy}}] <br>
+
+                                        <b>id: </b>{{$image->id}} <br>
+                                        <b>path: </b>{{$image->path}} <br>
+                                        <b>url: </b>{{Storage:: url($image->path)}} <br>
                                     </div>
                                     @empty
                                     <div class="col-12 col-md-4 border border-dark">
@@ -26,6 +37,7 @@
                                     @endforelse
                                 </div>
                             </div>
+                            
                         </div>
                         <p class="card-text">Titulo: <b> {{$ad->title}} </b></p>
                         <p class="card-text">Descripción: <b> {{$ad->body}} </b></p>
@@ -55,6 +67,6 @@
     @else
     <h1 class="text-center mt-5">NO HAY ANUNCIOS POR REVISAR !</h1>
     @endif
-
+    
 
 </x-layout>

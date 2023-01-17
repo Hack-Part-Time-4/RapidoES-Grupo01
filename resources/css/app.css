@@ -1,6 +1,31 @@
 @import '~bootstrap/dist/css/bootstrap';
 @import '~flag-icon-css/css/flag-icons';
+@import '~bootstrap-icons/font/bootstrap-icons';
 
 .body{
     background-color: dark;
+}
+
+.VERY_UNLIKELY{
+    color: greenyellow;
+}
+
+.UNLIKELY{
+    color: green;
+}
+
+.POSSIBLE{
+    color: orange;
+}
+
+.LIKELY{
+    color: orangered;
+}
+
+.VERY_LIKELY{
+    color: red;
+}
+
+.UNKNOWN{
+    color: gray;
 }
