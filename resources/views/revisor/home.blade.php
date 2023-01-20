@@ -26,6 +26,14 @@
                                         <b>Violence: </b><i class="bi bi-circle-fill {{$image->violence}}"></i><br> [{{$image->violence}}] <br>
                                         <b>Racy: </b><i class="bi bi-circle-fill {{$image->racy}}"></i><br> [{{$image->racy}}] <br>
 
+                                        <br>
+                                        <b>Labels</b><br>
+                                        @forelse ($image->getLabels() as $label)
+                                            <a href="#" class="btn btn-info btn-sm m-1">{{ $label }}</a>
+                                        @empty
+                                            No labels
+                                        @endforelse
+                                        <br>
                                         <b>id: </b>{{$image->id}} <br>
                                         <b>path: </b>{{$image->path}} <br>
                                         <b>url: </b>{{Storage:: url($image->path)}} <br>
