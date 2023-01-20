@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionRemoveFaces;
 use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Jobs\ResizeImage;
 use Livewire\Component;
@@ -10,6 +11,7 @@ use App\Models\Ad;
 use App\Models\Category;
 use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
 
@@ -94,10 +96,17 @@ public function store()
                 $newImage = $ad->images()->create([
                     'path'=>$image->store($newFileName,'public')
                 ]);
+                Bus::chain([
+                    new GoogleVisionRemoveFaces($newImage->id),
+                    new ResizeImage($newImage->path,400,300),
+                    new GoogleVisionSafeSearchImage($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch();
+                /* dispatch(new GoogleVisionRemoveFaces($newImage->id));
                 dispatch(new ResizeImage($newImage->path,400,300));
                 dispatch(new GoogleVisionSafeSearchImage($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
-
+                 */
                 
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
