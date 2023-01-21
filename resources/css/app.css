@@ -2,8 +2,29 @@
 @import '~flag-icon-css/css/flag-icons';
 @import '~bootstrap-icons/font/bootstrap-icons';
 
-.body{
-    background-color: dark;
+.background{
+    background-color: #6924a5;
+    /*  03363D
+        979797
+        E9E9E9 */
+}
+
+.backgroundNavbar{
+    background-color: #120727;
+    /* #03363D
+        676767 */
+}
+
+.navText{
+    color: #ffffff ;
+}
+
+.loginColor{
+    color: #cade01 ;
+}
+
+.h1Color{
+    color: #ffffff ;
 }
 
 .VERY_UNLIKELY{
