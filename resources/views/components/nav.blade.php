@@ -44,7 +44,7 @@
                
                     
                 @if (Route::has('login'))
-                    <a class="nav-link loginColor text-end" href="{{route ('login')}}">Entrar</a>
+                    <a class="nav-link loginColor" href="{{route ('login')}}">Entrar</a>
                 @endif
                   
                    
