@@ -3,20 +3,20 @@
 @import '~bootstrap-icons/font/bootstrap-icons';
 
 .background{
-    background-color: #6924a5;
+    background-color: #FFFFFF;
     /*  03363D
         979797
         E9E9E9 */
 }
 
 .backgroundNavbar{
-    background-color: #120727;
+    background-color: #042240;
     /* #03363D
         676767 */
 }
 
 .navText{
-    color: #ffffff ;
+    color: #FFFFFF ;
 }
 
 .loginColor{
