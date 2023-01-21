@@ -44,6 +44,8 @@ Route::get('/revisor/{user}/make', [RevisorController::class,'makeRevisor'])->mi
 
 Route::post('/locale/{locale}', [PublicController::class,'setLocale'])->name('locale.set');
 
+Route::get('/search', [PublicController::class,'search'])->name('search');
+
 /* Route::post('/', function () {
     return view('home');
 })->name('loginHome'); */

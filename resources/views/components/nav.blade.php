@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{{route ('categories')}}">Categorías</a>
                 </li>
 
-                
+
                 @guest
 
                 @if (Route::has('login'))
@@ -27,13 +27,13 @@
                     <a class="nav-link" href="{{route ('register')}}">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                    <x-locale lang="es" country="es"/>
+                    <x-locale lang="es" country="es" />
                 </li>
                 <li class="nav-item">
-                    <x-locale lang="en" country="gb"/>
+                    <x-locale lang="en" country="gb" />
                 </li>
                 <li class="nav-item">
-                    <x-locale lang="it" country="it"/>
+                    <x-locale lang="it" country="it" />
                 </li>
                 @endif
 
@@ -50,8 +50,9 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark bg-primary">
                         @if (Auth::user()->is_revisor == 1)
-                            <li><a class="dropdown-item" href="{{ Route('revisor.home') }}">Revisor --
-                                <span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::adCount() }}</span></a></li>
+                        <li><a class="dropdown-item" href="{{ Route('revisor.home') }}">Revisor --
+                                <span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::adCount() }}</span></a>
+                        </li>
                         @endif
 
                         <li><a class="dropdown-item" href="#">
@@ -63,6 +64,15 @@
 
                     </ul>
                 </div>
+
+                <div>
+                    <form action="{{ route('search') }}" method="GET" class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                </div>
+
+
 
 
 

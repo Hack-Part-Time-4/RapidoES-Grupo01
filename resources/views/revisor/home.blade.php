@@ -5,7 +5,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-4 ">
 
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 25rem;">
                     <div class="card-body">
 
                         <h5 class="card-title pb-2">Anuncio #{{$ad->id}}</h5>
@@ -15,6 +15,7 @@
                                 <p>Imágenes:</p>
                                 <div class="col">
                                     @forelse ($ad->images as $image)
+                                    
                                     <div class="col-12 col-md-4 border border-dark">
                                         <img src="{{ $image->getUrl(400,300) }}" alt="" class="img-fluid">
                                         
