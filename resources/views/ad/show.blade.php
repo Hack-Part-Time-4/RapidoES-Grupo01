@@ -3,7 +3,7 @@
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12">
-                <h1>Detalle de anuncio: {{ $ad->title }}</h1>
+                <h1>{{__('Detalle de anuncio')}}: {{ $ad->title }}</h1>
             </div>
         </div>
         <div class="row">

@@ -1,9 +1,9 @@
 <x-layout>
-    <x-slot name='title'>Rapido - Search</x-slot>
+    <x-slot name='title'>Rapido - {{__('Buscar')}}</x-slot>
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12">
-                <h1>Resultados para la busqueda : "{{ $q }}" </h1>
+                <h1>{{__('Resultados de la búsqueda')}} : "{{ $q }}" </h1>
             </div>
         </div>
         <div class="row">
@@ -37,7 +37,7 @@
 
 
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">Ver Más</a>
+                            <a href="#" class="btn btn-primary">{{__('Ver Más')}}</a>
                         </div>
 
                     </div>
@@ -50,9 +50,9 @@
             @empty
 
             <div class="col-md-8">
-                <h2>No se encontraron resultados en la busqueda</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-primary">Vender tu objeto</a>
-                <a href="{{ route('home') }}" class="btn btn-primary">Vuelve al inicio</a>
+                <h2>{{__('No se encontraron resultados de búsqueda')}}</h2>
+                <a href="{{ route('ads.create') }}" class="btn btn-primary">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('home') }}" class="btn btn-primary">{{__('Vuelve al inicio')}}</a>
             </div>
 
             @endforelse ($ads as $ad)

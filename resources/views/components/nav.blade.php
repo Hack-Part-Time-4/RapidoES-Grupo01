@@ -12,21 +12,21 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center ">
                 <li class="nav-item">
-                    <a class="nav-link  navText" aria-current="page" href="{{route ('home')}}">Inicio</a>
+                    <a class="nav-link  navText" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link navText" href="{{route ('categories')}}">Categorías</a>
+                    <a class="nav-link navText" href="{{route ('categories')}}">{{__('Categorías')}}</a>
                 </li>
 
                 <li class="">
-                    <a class="nav-link text-white" href="{{ route('ads.create') }}">Añadir anuncio</a>
+                    <a class="nav-link text-white" href="{{ route('ads.create') }}">{{__('Nuevo anuncio')}}</a>
                 </li>
 
                 <div>
                     <form action="{{ route('search') }}" method="GET" role="search" class="d-flex justify-content-end">
-                        <input class="form-control me-1 " type="search" placeholder="¿Qué buscas?" aria-label="Search"
+                        <input class="form-control me-1 " type="search" placeholder="{{__('¿Qué buscas?')}}" aria-label="Search"
                             name="q">
-                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        <button class="btn btn-outline-light" type="submit">{{__('Buscar')}}</button>
                     </form>
                 </div>
 
@@ -44,12 +44,12 @@
                
                     
                 @if (Route::has('login'))
-                    <a class="nav-link loginColor" href="{{route ('login')}}">Entrar</a>
+                    <a class="nav-link loginColor" href="{{route ('login')}}">{{__('Entrar')}}</a>
                 @endif
                   
                    
                 @if (Route::has('register'))
-                    <a class="nav-link loginColor" href="{{route ('register')}}">Registrarse</a>
+                    <a class="nav-link loginColor" href="{{route ('register')}}">{{__('Registrar')}}</a>
                 @endif
                   
 
@@ -64,7 +64,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark backgroundNavbar">
 
                         @if (Auth::user()->is_revisor == 1)
-                        <li><a class="dropdown-item" href="{{ Route('revisor.home') }}">Pendientes <i
+                        <li><a class="dropdown-item" href="{{ Route('revisor.home') }}">{{__('Pendientes')}} <i
                                     class="bi bi-arrow-right-short"></i>
                                 <span class="badge rounded-pill bg-danger">{{ \App\Models\Ad::adCount() }}</span></a>
                         </li>
@@ -75,7 +75,7 @@
                                 <form action="{{ route('logout') }}" method="POST"
                                     class="d-flex justify-content-center">
                                     @csrf
-                                    <button type="submit" class="bg-danger rounded-pill"> Logout </button>
+                                    <button type="submit" class="bg-danger rounded-pill"> {{__('Salir')}} </button>
                                 </form>
                             </a></li>
                     </ul>

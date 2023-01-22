@@ -1,10 +1,10 @@
 <x-layout>
-    <x-slot name='title'>Rapido - Categorías</x-slot>
+    <x-slot name='title'>Rapido - {{__('Categorías')}}</x-slot>
 
     <div class="container mt-3">
         <div class="row">
             <div class="col-12">
-                <h1>Listado de categorías</h1>
+                <h1>{{__('Listado de categorías')}}</h1>
             </div>
         </div>
     </div>

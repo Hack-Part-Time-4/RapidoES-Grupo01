@@ -9,7 +9,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                    <p class="text-center h1 fw-bold mb-1 mx-1 mx-md-4 mt-4">Sign in</p>
+                                    <p class="text-center h1 fw-bold mb-1 mx-1 mx-md-4 mt-4">{{__('Iniciar sesión')}}</p>
                                     @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>
@@ -27,7 +27,7 @@
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="email" name="email" id="email" class="form-control"
-                                                    placeholder="Tu email" />
+                                                    placeholder="{{__('Tu correo')}}" />
                                             </div>
                                             {{-- <div class="validate"></div> --}}
                                         </div>
@@ -36,13 +36,13 @@
                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <input type="password" name="password" id="password"
-                                                    class="form-control" placeholder="Tu contraseña" />
+                                                    class="form-control" placeholder="{{__('Tu contraseña')}}" />
                                             </div>
                                             {{-- <div class="validate"></div> --}}
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+                                            <button type="submit" class="btn btn-primary btn-lg">{{__('Entrar')}}</button>
                                         </div>
 
                                     </form>

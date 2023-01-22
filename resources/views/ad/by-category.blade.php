@@ -3,7 +3,7 @@
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12">
-                <h1>Anuncios por categoria: {{ $category->name }}</h1>
+                <h1>{{__('Anuncios por categoría')}}: {{ $category->name }}</h1>
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@
 
 
                         <div class="text-center">
-                            <a href="{{ route("ads.show", $ad) }}" class="btn btn-primary">Ver Más</a>
+                            <a href="{{ route("ads.show", $ad) }}" class="btn btn-primary">{{__('Ver Más')}}</a>
                         </div>
 
                     </div>
@@ -57,9 +57,9 @@
             @empty
 
             <div class="col-md-8">
-                <h2>No se encontro nada en esta categoría</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-primary">Vender tu objeto</a>
-                <a href="{{ route('home') }}" class="btn btn-primary">Vuelve al inicio</a>
+                <h2>{{__('No se encontraron anuncios en esta categoría')}}</h2>
+                <a href="{{ route('ads.create') }}" class="btn btn-primary">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('home') }}" class="btn btn-primary">{{__('Vuelve al inicio')}}</a>
             </div>
 
             @endforelse ($ads as $ad)
