@@ -67,8 +67,8 @@
 
                 <div>
                     <form action="{{ route('search') }}" method="GET" class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <input class="form-control me-2 text-warning" type="search" placeholder="Search" aria-label="Search" name="q">
+                        <button class="btn btn-outline-dark text-white" type="submit">Search</button>
                     </form>
                 </div>
 
