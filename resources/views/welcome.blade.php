@@ -3,7 +3,7 @@
 
     <div class="container mt-3">
         <div class="row mb-5">
-            <div class="col-12 text-center  h1Color">
+            <div class="col-12 text-center ">
                 <h1>{{__('messages.welcome')}}</h1>
             </div>
         </div>
