@@ -44,7 +44,7 @@
 
 
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">Ver Más</a>
+                            <a href="{{ route("ads.show", $ad) }}" class="btn btn-primary">Ver Más</a>
                         </div>
 
                     </div>

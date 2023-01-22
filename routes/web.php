@@ -32,6 +32,8 @@ Route::get('/category/{category:name}/ads', [PublicController::class,'adsByCateg
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
+Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
+
 Route::get('/', [PublicController::class,'index'])->name('home');
 
 Route::get('/revisor', [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.home');
