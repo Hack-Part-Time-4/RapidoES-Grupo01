@@ -4,6 +4,8 @@
             {{session('message')}}
         </div>
     @endif
+
+
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">
@@ -13,9 +15,9 @@
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
-                
             </select>
         </div>
+
         <div class="mb-3">
             <label for="title" class="form-label">{{__('Título')}}: </label>
             <input wire:model="title" type="text"  class="form-control @error('title')
@@ -23,8 +25,8 @@
                 @error('title')
                     {{$message}}
                 @enderror
-
         </div>
+
         <div class="mb-3">
             <label for="body" class="form-label">{{__('Descripción')}}: </label> <br>
             <textarea wire:model="body" cols="80" rows="8" class="form-control @error('body')
@@ -33,6 +35,7 @@
                 {{$message}}
             @enderror
         </div>
+
         <div class="mb-3">
             <label for="price" class="form-label">{{__('Precio')}}: </label>
             <input wire:model="price" type="number"  class="form-control @error('price')
@@ -41,6 +44,7 @@
                 {{$message}}
             @enderror
         </div>
+
         <div class="mb-3">
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*')
             is-invalid @enderror"> 
@@ -48,23 +52,29 @@
                <p class="text-danger mt-2">{{$message}}</p> 
             @enderror
         </div>
+
         @if (!empty($images))
-        <div class="row">
-            <div class="col-12">
                 <p>{{__('Vista previa')}}:</p>
                 <div class="row">
                     @foreach ($images as $key=>$image)
-                    <div class="col-12 col-md-4 border border-dark">
-                        <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid">
-                        <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('Eliminar')}}</button>
+
+                    <div class="col-md-2 d-flex row align-content-center container-fluid">
+
+                        <div class="d-flex justify-content-center">
+                            <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid">
+                        </div>
+                            
+                        <div class="d-flex justify-content-center mt-1 mb-3">
+                            <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('Eliminar')}}</button>
+                        </div>
+                            
                     </div>    
                     @endforeach
-                    
                 </div>
-            </div>
-        </div>
         @endif
+        <div class="d-flex justify-content-center border-top border-white mt-3">
+            <button type="submit" class="btn btn-outline-light mt-3">{{__('Crear')}}</button>
+        </div>
         
-        <button type="submit" class="btn btn-primary">{{__('Crear')}}</button>
     </form>
 </div>
