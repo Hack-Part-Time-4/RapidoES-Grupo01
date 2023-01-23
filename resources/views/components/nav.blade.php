@@ -10,46 +10,37 @@
 
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center ">
-                <li class="nav-item">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ">
+                <li class="nav-item text-center">
                     <a class="nav-link  navText" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item text-center">
                     <a class="nav-link navText" href="{{route ('categories')}}">{{__('Categorías')}}</a>
                 </li>
 
-                <li class="">
+                <li class="text-center">
                     <a class="nav-link text-white" href="{{ route('ads.create') }}">{{__('Nuevo anuncio')}}</a>
                 </li>
+            </ul>
 
-                <div>
-                    <form action="{{ route('search') }}" method="GET" role="search" class="d-flex justify-content-end">
-                        <input class="form-control me-1 " type="search" placeholder="{{__('¿Qué buscas?')}}" aria-label="Search"
-                            name="q">
-                        <button class="btn btn-outline-light" type="submit">{{__('Buscar')}}</button>
-                    </form>
-                </div>
+            <div>
+                <form action="{{ route('search') }}" method="GET" role="search" class="d-flex justify-content-between">
+                    <input class="form-control me-1 w-75" type="search" placeholder="{{__('¿Qué buscas?')}}" aria-label="Search"
+                        name="q">
+                    <button class="btn btn-outline-light p-1" type="submit">{{__('Buscar')}}</button>
+                </form>
+            </div>
 
-                <div class="d-flex justify-content-end">
-                    <a class="" href="">
-                        <x-locale lang="es" country="es" />
-                    </a>
-
-                    <a class="" href="">
-                        <x-locale lang="en" country="gb" />
-                    </a>
-                </div>
+            <div class="d-flex justify-content-evenly my-3">
                 @guest
-
-               
                     
                 @if (Route::has('login'))
-                    <a class="nav-link loginColor" href="{{route ('login')}}">{{__('Entrar')}}</a>
+                    <a class="nav-link loginColor me-2" href="{{route ('login')}}">{{__('Entrar')}}</a>
                 @endif
                   
                    
                 @if (Route::has('register'))
-                    <a class="nav-link loginColor" href="{{route ('register')}}">{{__('Registrar')}}</a>
+                    <a class="nav-link loginColor ms-2" href="{{route ('register')}}">{{__('Registrar')}}</a>
                 @endif
                   
 
@@ -71,20 +62,28 @@
                         @endif
 
 
-                        <li><a class="dropdown-item" href="#">
+                        <li>
+                            <a class="dropdown-item" href="#">
                                 <form action="{{ route('logout') }}" method="POST"
                                     class="d-flex justify-content-center">
                                     @csrf
                                     <button type="submit" class="bg-danger rounded-pill"> {{__('Salir')}} </button>
                                 </form>
-                            </a></li>
+                            </a>
+                        </li>
                     </ul>
-
                 </div>
-
                 @endguest
-            </ul>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                    <a  href="">
+                        <x-locale lang="es" country="es" />
+                    </a>
 
+                    <a  href="">
+                        <x-locale lang="en" country="gb" />
+                    </a>
+                </div>
         </div>
     </div>
 
