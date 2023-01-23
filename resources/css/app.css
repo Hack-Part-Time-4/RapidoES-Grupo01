@@ -11,13 +11,16 @@
 
 .backgroundNavbar{
     background-color: #042240;
-    /* #03363D
-        676767 */
 }
 
 .navText{
     color: #FFFFFF ;
 }
+
+.backgroundCard{
+    background-color: /* #083057 */ #89CAF0;
+}
+
 
 .loginColor{
     color: #cade01 ;

@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg  backgroundNavbar navText ">
+<nav class="navbar navbar-expand-lg  backgroundNavbar text-white ">
 
 
     <div class="container-fluid">
-        <a class="navbar-brand navText" href="{{route ('home')}}">RapidoES</a>
+        <a class="navbar-brand text-white" href="{{route ('home')}}">RapidoES</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ">
                 <li class="nav-item text-center">
-                    <a class="nav-link  navText" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
+                    <a class="nav-link  text-white" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
                 </li>
                 <li class="nav-item text-center">
-                    <a class="nav-link navText" href="{{route ('categories')}}">{{__('Categorías')}}</a>
+                    <a class="nav-link text-white" href="{{route ('categories')}}">{{__('Categorías')}}</a>
                 </li>
 
                 <li class="text-center">
@@ -47,7 +47,7 @@
                 @else
 
                 <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-outline-light {{-- navText --}} dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ Auth::user()->name }}
                     </button>
