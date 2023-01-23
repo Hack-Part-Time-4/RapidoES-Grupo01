@@ -58,7 +58,7 @@
                 <div class="row">
                     @foreach ($images as $key=>$image)
 
-                    <div class="col-md-2 d-flex row align-content-center container-fluid">
+                    <div class="row col-md-2 d-flex align-content-center container-fluid">
 
                         <div class="d-flex justify-content-center">
                             <img src="{{ $image->temporaryUrl() }}" alt="" class="img-fluid">
