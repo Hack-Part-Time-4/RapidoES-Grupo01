@@ -1,18 +1,14 @@
 
 <footer class="py-3 my-4 backgroundNavbar ">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3 ">
+      <ul class="nav justify-content-evenly border-bottom pb-2 mb-2 ">
         <li class="nav-item "><a href="#" class="nav-link px-2 navText">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 navText">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 navText">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 navText">FAQs</a></li>
         <li class="nav-item"><a href="{{ route('revisor.become') }}" class="nav-link px-2 loginColor ">Work with Us</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 navText">About</a></li>
       </ul>
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="text-center navText">© 2023 Company, Inc</li>
-      <li class="ms-3"><a class="navText text-warning" href="#"><svg class="bi" width="24" height="24"><use href="#twitter"><i class="bi bi-twitter"></i></use></svg></a></li>
-      <li class="ms-3"><a class="navText" href="#"><svg class="bi" width="24" height="24"><use href="#instagram"><i class="bi bi-instagram"></i></use></svg></a></li>
-      <li class="ms-3"><a class="navText" href="#"><svg class="bi" width="24" height="24"><use href="#facebook"><i class="bi bi-facebook"></i></use></svg></a></li>
-      </ul>
-      
+      <div class="d-flex justify-content-center mb-3">
+        <a href=""><i class="bi bi-twitter text-white mx-1"></i></a>
+        <a href=""><i class="bi bi-instagram text-white mx-1"></i></a>
+        <a href=""><i class="bi bi-facebook text-white mx-1"></i></a>
+      </div>
+        <p class="text-center navText">2023 Daltarios ©</p>
     </footer>

@@ -4,7 +4,7 @@
     <div class="container mt-3">
         <div class="row mb-5">
             <div class="col-12 text-center ">
-                <h1>{{__('Bienvenido a rapido.es')}}</h1>
+                <h1>{{__('Bienvenidos a nuestro portal de anuncios')}}</h1>
             </div>
         </div>
         <div class="row ">
@@ -22,10 +22,10 @@
                         <img src="https://picsum.photos/150" class="card-img-top imge-fluid" alt="">
                     @endif
                     
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{$ad->title}}</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title text-center border-bottom p-3 border-primary">{{$ad->title}}</h5>
 
-                        <hr>
+                        
 
                         <p class="card-text text-center">{{$ad->body}}</p>
 
