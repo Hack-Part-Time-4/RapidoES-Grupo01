@@ -11,7 +11,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2">
-                            <div class="card">
+                            <div class="card backgroundCard">
                                 <div class="card-header">
                                     Anuncio #{{$ad->id}}
                                 </div>
@@ -85,10 +85,8 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-                   
+            
                 </div>
             </div>
 
