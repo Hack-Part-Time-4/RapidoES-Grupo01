@@ -40,8 +40,8 @@
 
                         <div class="d-flex justify-content-between mt-2">
                             <a href="{{ route('category.ads',$ad->category) }}"
-                                class="btn btn-outline-primary">{{$ad->category->name}}</a>
-                            <a href="{{ route("ads.show", $ad) }}" class="btn btn-outline-primary">{{__('Ver Más')}}</a>
+                                class="{{-- btn btn-outline-primary --}}btn loginColor backgroundNavbar decoracionNo">{{$ad->category->name}}</a>
+                            <a href="{{ route("ads.show", $ad) }}" class="{{-- btn btn-outline-primary --}}btn loginColor backgroundNavbar decoracionNo">{{__('Ver Más')}}</a>
                         </div>
                     </div>
                 </div>

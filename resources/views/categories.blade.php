@@ -6,11 +6,11 @@
 
 
     @forelse ($cats as $cat)
-    <div class="list-group m-auto my-3 w-50{{-- my-3 mx-5 --}}">
+    <div class="list-group m-auto my-3 w-50">
         <a href="{{ route('category.ads',$cat) }} "
-            class="{{-- list-group-item list-group-item-primary --}}  btn backgroundNavbar text-white">
+            class="btn loginColor backgroundNavbar decoracionNo">
             {{ $cat->name }}
-        </a>
+    </a>
     </div>
     @empty
     @endforelse

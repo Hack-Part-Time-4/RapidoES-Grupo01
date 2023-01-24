@@ -9,7 +9,6 @@
         </div>
         <div class="row ">
             @forelse ($ads as $ad)
-
             {{-- https://picsum.photos/150 --}}
 
             <div class="col-12 col-md-3 d-flex justify-content-center">
@@ -36,8 +35,8 @@
 
                         <div class="d-flex justify-content-between mt-2">
                             <a href="{{ route('category.ads',$ad->category) }}"
-                                    class="btn btn-outline-primary">{{$ad->category->name}}</a>
-                            <a href="{{ route("ads.show", $ad) }}" class="btn btn-outline-primary">{{__('Ver Más')}}</a>
+                                    class="{{-- btn btn-outline-primary --}}btn loginColor backgroundNavbar decoracionNo">{{$ad->category->name}}</a>
+                            <a href="{{ route("ads.show", $ad) }}" class="{{-- btn btn-outline-primary --}}btn loginColor backgroundNavbar decoracionNo">{{__('Ver Más')}}</a>
                         </div>
                         
                     </div>

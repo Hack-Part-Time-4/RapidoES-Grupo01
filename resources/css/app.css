@@ -21,9 +21,16 @@
     background-color: /* #083057 */ #89CAF0;
 }
 
+a:hover{
+    color:#FFFFFF
+}
+
+.decoracionNo{
+    text-decoration: none;
+}
 
 .loginColor{
-    color: #32D6C9 ;
+    color: #F3A847 ;
 }
 
 .textCard{

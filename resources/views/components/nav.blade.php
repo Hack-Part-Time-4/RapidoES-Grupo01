@@ -16,13 +16,13 @@
 
             <ul class="navbar-nav me-auto ms-md-5 my-3">
                 <li class=" text-center mx-3">
-                    <a class="nav-link  text-white" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
+                    <a class="{{-- nav-link --}} decoracionNo text-white" aria-current="page" href="{{route ('home')}}">{{__('Inicio')}}</a>
                 </li>
                 <li class=" text-center mx-3">
-                    <a class="nav-link text-white" href="{{route ('categories')}}">{{__('Categorías')}}</a>
+                    <a class="{{-- nav-link --}}decoracionNo text-white" href="{{route ('categories')}}">{{__('Categorías')}}</a>
                 </li>
                 <li class="text-center mx-3">
-                    <a class="nav-link text-white" href="{{ route('ads.create') }}">{{__('Nuevo anuncio')}}</a>
+                    <b><a class="{{-- nav-link text-white --}} loginColor decoracionNo" href="{{ route('ads.create') }}">{{__('Nuevo anuncio')}}</a></b>
                 </li>
             </ul>
 
@@ -38,19 +38,19 @@
                 @guest
 
                 @if (Route::has('login'))
-                <a class="nav-link loginColor me-2 mx-md-3" href="{{route ('login')}}">{{__('Entrar')}}</a>
+                <b><a class=" loginColor me-2 mx-md-3 decoracionNo" href="{{route ('login')}}">{{__('Entrar')}}</a></b>
                 @endif
 
 
                 @if (Route::has('register'))
-                <a class="nav-link loginColor ms-2 mx-md-3" href="{{route ('register')}}">{{__('Registrar')}}</a>
+                <b><a class=" loginColor ms-2 mx-md-3 decoracionNo" href="{{route ('register')}}">{{__('Registrar')}}</a></b>
                 @endif
 
 
                 @else
 
                 <div class="dropdown">
-                    <button class="btn btn-outline-light {{-- navText --}} dropdown-toggle me-3" type="button"
+                    <button class="btn btn-outline-light dropdown-toggle me-3" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </button>
@@ -85,7 +85,7 @@
                     <x-locale lang="es" country="es" />
                 </a>
 
-                <a class="{{-- me-md-2 --}}" href="">
+                <a class="" href="">
                     <x-locale lang="en" country="gb" />
                 </a>
             </div>
