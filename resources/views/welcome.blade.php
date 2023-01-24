@@ -18,7 +18,7 @@
                     <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top img-fluid"
                     alt="...">
                     @else
-                        <img src="https://picsum.photos/150" class="card-img-top img-fluid" alt="">
+                        <img src="https://picsum.photos/400/300?{{$loop->index}}" class="card-img-top img-fluid" alt="">
                     @endif
                     
                     <div class="card-body ">
