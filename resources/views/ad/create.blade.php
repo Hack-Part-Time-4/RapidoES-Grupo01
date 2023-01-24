@@ -4,7 +4,7 @@
     </x-slot>
 
     <div class="container">
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center my-5">
             <div class="col-md-9">
                 <div class="card text-white backgroundNavbar ">
                     <div class="card-header text-center border-bottom border-white">

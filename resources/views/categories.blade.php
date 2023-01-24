@@ -6,9 +6,9 @@
 
 
     @forelse ($cats as $cat)
-    <div class="list-group my-3 mx-5">
+    <div class="list-group m-auto my-3 w-50{{-- my-3 mx-5 --}}">
         <a href="{{ route('category.ads',$cat) }} "
-            class="{{-- list-group-item list-group-item-primary --}} btn btn-primary">
+            class="{{-- list-group-item list-group-item-primary --}}  btn backgroundNavbar text-white">
             {{ $cat->name }}
         </a>
     </div>

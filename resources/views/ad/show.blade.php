@@ -1,11 +1,14 @@
 <x-layout>
     <x-slot name='title'>Rapido - {{ $ad->title }}</x-slot>
+
     <div class="container mt-3">
+
         <div class="row mb-5">
             <div class="col-12">
                 <h1>{{__('Detalle de anuncio')}}: {{ $ad->title }}</h1>
             </div>
         </div>
+
         <div class="row">
            <div class="col-12 col-md-4 mb-5">
                 <div class="card" style="width: 18rem;">

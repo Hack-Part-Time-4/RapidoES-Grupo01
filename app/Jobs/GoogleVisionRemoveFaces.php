@@ -59,8 +59,8 @@ class GoogleVisionRemoveFaces implements ShouldQueue
                 $bounds[] = [$vertex->getX(), $vertex->getY()];
             }
 
-            $w = $bounds[2][0] = $bounds[0][0];
-            $h = $bounds[2][1] = $bounds[0][1];
+            $w = $bounds[2][0] - $bounds[0][0];
+            $h = $bounds[2][1] - $bounds[0][1];
 
             $image = SpatieImage::load($srcPath);
 
