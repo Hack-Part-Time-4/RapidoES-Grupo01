@@ -2,13 +2,13 @@
 
     <x-slot name="title">Rapido - Login</x-slot>
 
-    {{-- <section class="vh-100"> --}}
+    <section class="vh-100">
 
         <div class="container-fluid my-3">
 
-{{--             <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
 
-                <div class="col-lg-12 col-xl-11"> --}}
+                <div class="col-lg-12 col-xl-11">
 
                     <div class="card textCard" style="border-radius: 25px;">
 
@@ -66,8 +66,8 @@
                             </div>
                         </div>
                     </div>
-            {{--     </div>
-            </div> --}}
+                </div>
+            </div>
         </div>
-    {{-- </section> --}}
+    </section>
 </x-layout>
